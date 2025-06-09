@@ -1,0 +1,31 @@
+---
+_format_version: "1.0"
+add-plugins:
+  - selectors:
+    - $..services[*]
+    overwrite: true
+    plugins:
+      - name: key-auth
+        config:
+          anonymous: null
+          hide_credentials: false
+          identity_realms:
+            - id: null
+              region: null
+              scope: cp
+          key_in_body: false
+          key_in_header: true
+          key_in_query: true
+          key_names:
+            - apikey
+          realm: null
+          run_on_preflight: true
+        enabled: true
+        id: 91bb0e7e-725f-4747-858c-b2c3cfcd279a
+        protocols:
+          - grpc
+          - grpcs
+          - http
+          - https
+          - ws
+          - ws
