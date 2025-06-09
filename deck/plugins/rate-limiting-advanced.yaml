@@ -8,14 +8,14 @@ add-plugins:
     enabled: true
     config:
       limit:
-      - 20
+      - 5
       window_size:
-      - 30
-      identifier: ip
+      - 60
+      identifier: consumer
       dictionary_name: kong_rate_limiting_counters
       sync_rate: -1
       namespace: random_auto_generated_string
-      strategy: redis
+      strategy: local
       hide_client_headers: false
       window_type: sliding
       retry_after_jitter_max: 0
