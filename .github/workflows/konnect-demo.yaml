@@ -39,8 +39,6 @@ jobs:
         DEMO_NAMESPACE: ${{ secrets.DEMO_NAMESPACE }}
     - name: Add Kong plugins
       run: |
-        # Add plugins based on literal config
-        deck file add-plugins -s kong.yaml -o kong.yaml --config "$KONG_OIDC_CONF" --selector "$.services[*]"
         # Add plugins based on files in folder
         deck file add-plugins -s kong.yaml -o kong.yaml ./deck/plugins/*
       env:
