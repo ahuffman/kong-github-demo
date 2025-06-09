@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
     paths:
       - 'deck/**'
       - 'blog_insomnia.yaml'
